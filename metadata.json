@@ -1,0 +1,13 @@
+{
+  "name": "GitCommitObsidianVaults",
+  "description": "Git commit changes to Obsidian vaults",
+  "uuid": "GitCommitObsidianVaults",
+  "shell-version": [
+    "3.36",
+    "3.38",
+    "40",
+    "41",
+    "42",
+    "43"
+  ]
+}
