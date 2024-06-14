@@ -1,10 +1,10 @@
 #!/bin/bash
 
-GIT_PROJECT_PATH="$HOME/Documents/Dev/Own/obsidian"
+GIT_PROJECT_PATH="${OBSIDIAN_VAULTS:-$HOME/Documents/Obsidian}"
 
-git -C $GIT_PROJECT_PATH checkout main
-git -C $GIT_PROJECT_PATH add --all
-git -C $GIT_PROJECT_PATH diff --staged --quiet
+git -C "$GIT_PROJECT_PATH" checkout main
+git -C "$GIT_PROJECT_PATH" add --all
+git -C "$GIT_PROJECT_PATH" diff --staged --quiet
 
 # Exit code is 0 (no changes) or 1 (yes changes)
 if [ $? == 1 ]
@@ -16,4 +16,3 @@ then
 else
   notify-send "No changes to Obsidian vaults found"
 fi
-
